@@ -27,13 +27,46 @@ void printHollowRectangle(int row,int column){
     }
 }
 
-// 3.  
+// 3.  Half Pyramid
+void printHalfPyramid(int sizePym){
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<=i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+// 4. Inverted Pyramid
+void invertedPyramid(int sizepym){
+    for(int i = 0;i<sizepym;i++){
+        for(int j = 0;j<sizepym-i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+// 5.  numeric half pyramid
+ void nummericHalfPyramid(int sizepym){
+    for(int i = 1;i<=sizepym;i++){
+        for(int j = 1;j<=i;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+ }
+ 
+
 
 int main(){
     int sizeOfSide;
-    int row,column;
-    cin>>row>>column;
-    printHollowRectangle(row,column);
-    //cin>>sizeOfSide;
+    //int row,column;
+    //cin>>row>>column;
+    //printHollowRectangle(row,column);
+    cin>>sizeOfSide;
     //printSquare(sizeOfSide);
+    //printHalfPyramid(sizeOfSide);
+    //invertedPyramid(sizeOfSide);
+    nummericHalfPyramid(sizeOfSide);
 }
