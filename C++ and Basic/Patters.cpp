@@ -184,6 +184,174 @@ void fancyPattern(int sizePym){
         cout<<endl;
     }
 }
+
+//13 Alphabet Palindrome Pyramid
+void alpabetPalindromePyramid(int sizePym){
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<2*i+1;j++){
+            if(j > i)
+                cout<<(char)('A'+(2*i -j));
+            else
+                cout<<(char)('A'+j);
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+//14. Numeric Hollow pyramid
+void numericHollowPyraid(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<=row;col++){
+            if(row  == sizePym-1)
+                cout<<col+1<<" ";
+            
+            else if(col == 0 or col == row)
+                cout<<col+1<<" ";
+            else
+                cout<<"  ";
+        }
+        cout<<endl;
+    }
+}
+
+//15 Inverted Numeric Hollow Pyramid
+void invertedNumericHollowPyramid(int sizePym){
+    for(int row = sizePym;row>0;row--){
+        for(int col = 0;col<row;col++){
+            if(row == sizePym)
+                cout<<col+1;
+            else if(col== 0 )
+                cout<<sizePym-row+1;
+            else if(col == row-1)
+                cout<<sizePym;
+            else
+                cout<<" ";
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+// 16. NUmeric Palindrome Equilateral Pyramid
+void numericPalindromeEquilateralPyramid(int sizePym){
+    for(int i = 0;i<sizePym;i++){
+        for(int j = i+1;j<sizePym;j++)
+            cout<<"  ";
+        for(int j = 0;j<=i;j++)
+            cout<<j+1<<" ";
+        for(int j = i;j>=1;j--)
+            cout<<j<<" ";
+        cout<<endl;
+    }
+}
+// 17. Fancy Pattern?
+void fancyPattern1(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 1;col<=(sizePym-1) + (sizePym-1-row);col++)
+            cout<<"*";
+        for(int col = 0;col<=2*row+1;col++)
+        {
+            if(col%2 == 0)
+                cout<<row+1;
+            else    
+                cout<<"*";
+        }
+        for(int col = 1;col<=(sizePym-1) + (sizePym-1-row);col++)
+            cout<<"*";
+        cout<<endl;
+    }
+
+}
+// 18. Solid Half Diamond
+void solidHalfDiamond(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<=row;col++)
+            cout<<"* ";
+        cout<<endl; 
+    }
+    for(int row = sizePym-2;row>=0;row--)
+    {
+        for(int col = 0;col<=row;col++)
+            cout<<"* ";
+        cout<<endl;
+    }
+}
+
+// 19. Fancy Pattern2
+void fancyPattern2(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<=row;col++)
+            {
+                if(col == 0)
+                    cout<<"* ";
+                else
+                    cout<<col<<" ";                
+            }
+        for(int col = row;col>=2;col--){
+            cout<<col-1<<" ";
+        }
+        if(row!=0)
+            cout<<"*";
+            cout<<endl;
+    }
+    for(int row = sizePym-1;row>=0;row--){
+        for(int col = 0;col<row;col++){
+            if(col == 0)
+                cout<<"* ";
+            else
+                cout<<col<<" ";
+        }
+        for(int col = row-1;col>=2;col--)
+        {
+            cout<<col-1<<" ";
+        }
+        if(row>1)
+            cout<<"*";
+
+        cout<<endl;
+    }
+}
+//20. fancy Patter3
+void fancyPattern3(int sizePym){
+    int count = 1;
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<=row;col++)
+            {
+                cout<<count++;
+                if(col!=row)
+                    cout<<"*";
+            }
+
+        cout<<endl;
+    }
+    count--;
+    for(int row = sizePym;row>0;row--){
+        count = count  - row;
+        for(int col = 0;col<row;col++)
+            {
+                cout<<count+col+1;
+                if(col!=row-1)
+                    cout<<"*";
+            }
+        cout<<endl;
+    }
+}
+// 21. Floyd Triangle Pattern
+void floydTrianglePattern(int sizePym){
+    int count  = 1;
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<=row;col++)
+        {
+            cout<<count++<<" ";
+        }
+        cout<<endl;
+    }
+}
+//22 Pascal Triangle
+void pascalTriangle(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        
+    }
+}
 // 10. Numeric Full Pyramid
 void NumericFullPyramid(int sizePym){
 
@@ -202,8 +370,17 @@ int main(){
     //invertedNumericHalfPyramid(sizeOfSide);
     //fullPyramid(sizeOfSide);
     //InvertedFullyremid(sizeOfSide);
-    //SolidDiamond(sizeOfSide);
+    // SolidDiamond(sizeOfSide);
     //HollowDiamond(sizeOfSide);
     //fiippedSolidDiamond(sizeOfSide);
-    fancyPattern(sizeOfSide);
+    // fancyPattern(sizeOfSide);
+    //alpabetPalindromePyramid(sizeOfSide);
+    //numericHollowPyraid(sizeOfSide);
+    //invertedNumericHollowPyramid(sizeOfSide);
+    //numericPalindromeEquilateralPyramid(sizeOfSide);
+    // fancyPattern1(sizeOfSide);
+    // solidHalfDiamond(sizeOfSide);
+    //fancyPattern2(sizeOfSide);
+    // fancyPattern3(sizeOfSide);
+    floydTrianglePattern(sizeOfSide);
 }
