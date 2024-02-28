@@ -90,7 +90,58 @@ void InvertedFullyremid(int sizePym){
     }
 }
 
-// 9. Numeric Full Pyramid
+// 9. Solid Diramond
+void SolidDiamond(int sizePym){
+    //upper triangle
+    for(int i = 0;i<sizePym;i++){
+        for(int j = i;j<sizePym-1;j++){
+            cout<<" ";
+        }
+        for(int j = 0;j<=i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    //lower triangle
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<i;j++)
+        {
+            cout<<" ";
+        }
+        for(int j = 0;j<sizePym-i;j++){
+            cout<<"* ";
+        }
+        
+        cout<<endl;
+    }
+}
+//10 Hollow Diamond
+void HollowDiamond(int sizePym){
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<sizePym-i-1;j++)
+            cout<<" ";
+        for(int j = 0;j<=i;j++)
+            if(j == 0 or j == i)
+                cout<<"* ";
+            else
+                cout<<"  ";
+        cout<<endl;
+    }
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<i;j++)
+            cout<<" ";
+        for(int j = 0;j<sizePym;j++)
+            {
+                if(j == 0 or j == sizePym-i-1)
+                    cout<<"* ";
+                else    
+                    cout<<"  ";
+            }
+            cout<<endl;
+    }
+}
+
+// 10. Numeric Full Pyramid
 void NumericFullPyramid(int sizePym){
 
 }
@@ -107,5 +158,8 @@ int main(){
     //nummericHalfPyramid(sizeOfSide);
     //invertedNumericHalfPyramid(sizeOfSide);
     //fullPyramid(sizeOfSide);
-    InvertedFullyremid(sizeOfSide);
+    //InvertedFullyremid(sizeOfSide);
+    //SolidDiamond(sizeOfSide);
+    //HollowDiamond(sizeOfSide);
+    
 }
