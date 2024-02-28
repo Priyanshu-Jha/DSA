@@ -140,7 +140,50 @@ void HollowDiamond(int sizePym){
             cout<<endl;
     }
 }
-
+//11 Flipped Solid Diamond
+void fiippedSolidDiamond(int sizePym){
+    // Upper diamond
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<2*sizePym;j++){
+            if(j<=sizePym-1-i or j>=sizePym+i)
+                cout<<"* ";
+            else
+                cout<<"  ";
+        }
+        cout<<endl;
+    }
+    //Lower diamond
+    for(int i = 0;i<sizePym;i++){
+        for(int j = 0;j<2*sizePym;j++){
+            if(j<=i or j>=2*sizePym-i-1)
+                cout<<"* ";
+            else
+                cout<<"  ";
+        }
+        cout<<endl;
+    }
+}
+//12 Fancy Patter
+void fancyPattern(int sizePym){
+    for(int row = 0;row<sizePym;row++){
+        for(int col = 0;col<2*row+1;col++){
+            if(col%2 == 0)
+                cout<<row+1;
+            else
+                cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int row = sizePym-1;row>-1;row--){
+        for(int col = 0;col<2*row+1;col++){
+            if(col%2 == 0)
+                cout<<row+1;
+            else
+                cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 // 10. Numeric Full Pyramid
 void NumericFullPyramid(int sizePym){
 
@@ -161,5 +204,6 @@ int main(){
     //InvertedFullyremid(sizeOfSide);
     //SolidDiamond(sizeOfSide);
     //HollowDiamond(sizeOfSide);
-    
+    //fiippedSolidDiamond(sizeOfSide);
+    fancyPattern(sizeOfSide);
 }
