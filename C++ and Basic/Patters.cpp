@@ -375,12 +375,12 @@ int main(){
     //fiippedSolidDiamond(sizeOfSide);
     // fancyPattern(sizeOfSide);
     //alpabetPalindromePyramid(sizeOfSide);
-    //numericHollowPyraid(sizeOfSide);
+    numericHollowPyraid(sizeOfSide);
     //invertedNumericHollowPyramid(sizeOfSide);
     //numericPalindromeEquilateralPyramid(sizeOfSide);
     // fancyPattern1(sizeOfSide);
     // solidHalfDiamond(sizeOfSide);
     //fancyPattern2(sizeOfSide);
     // fancyPattern3(sizeOfSide);
-    floydTrianglePattern(sizeOfSide);
+    //floydTrianglePattern(sizeOfSide);
 }

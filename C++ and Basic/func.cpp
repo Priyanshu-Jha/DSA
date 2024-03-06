@@ -7,10 +7,13 @@ void checkPrimeNumber(int n){
     }
     cout<<n<<endl;
 }
+
+
 int main(){
     int n,sum = 0;
     cin>>n;
     for(int i = 2;i<n+1;i++)
         checkPrimeNumber(i);
     return  0;
+
 }
